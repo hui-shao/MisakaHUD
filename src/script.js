@@ -86,10 +86,10 @@ function updateMe(){
     stabledY += (lastY - stabledY) / 5;
 //    document.getElementById("mouse-indicator").style.top = stabledY + "px";
 //    document.getElementById("mouse-indicator").style.left = stabledX + 20 + "px";
-    document.getElementById("left-bottom-hud-1").style.bottom = make_range(5, 1.3, stabledY/10.8) + "rem";
+    document.getElementById("left-bottom-hud-1").style.bottom = make_range(8, 1.3, stabledY/10.8) + "rem";
     document.getElementById("left-bottom-hud-1").style.left = make_range(5, 1, -stabledX/19.2) + "rem";
 
-    document.getElementById("right-bottom-hud-1").style.bottom = make_range(5, 1.3, stabledY/10.8) + "rem";
+    document.getElementById("right-bottom-hud-1").style.bottom = make_range(8, 1.3, stabledY/10.8) + "rem";
     document.getElementById("right-bottom-hud-1").style.right = make_range(5, 1, stabledX/19.2) + "rem";
 //    document.getElementById("left-bottom-hud-1").style.transform =
 //        "rotate3d(" + make_range(0.15, 0.15, event.pageY/10.8) + ", 0, -0.015, 15deg)";
@@ -196,7 +196,9 @@ function long_term_timer(){
     }
 }
 function friendly_time_duration(seconds){
-    if(seconds < 60){
+	if(seconds <= 3){
+		return "刚刚"
+	}else if(seconds < 60){
         return Math.floor(seconds) + "秒前";
     }else if(seconds < 3600){
         return Math.floor(seconds / 60) + "分钟前";
@@ -204,16 +206,6 @@ function friendly_time_duration(seconds){
         return Math.floor(seconds / 3600) + "小时前";
     }
 }
-/*
-function friendly_time_duration_eng(seconds){
-    if(seconds < 60){
-        return Math.floor(seconds) + " second(s)";
-    }else if(seconds < 3600){
-        return Math.floor(seconds / 60) + "minute(s)";
-    }else{
-        return Math.floor(seconds / 3600) + "hour(s)";
-    }
-}*/
 
 /*
 function screen_console_log(log_content){

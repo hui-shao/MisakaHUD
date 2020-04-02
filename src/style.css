@@ -46,6 +46,17 @@ body{
     bottom: 3.5rem;
     transform: rotate3d(0.15, 0, -0.01, 15deg);
 }
+@keyframes blink{
+	0% {opacity: 0;}
+	49% {opacity: 0;}
+	50% {opacity: 1;}
+	100% {opacity: 1;}
+}
+.blink-cursor{
+	opacity: 0;
+	animation: blink 1s 0.5s infinite;
+	position: absolute;
+}
 .button_link{
     color: inherit;
     text-decoration: none;
