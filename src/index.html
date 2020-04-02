@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Misaka live wallpaper project</title>
+</head>
+<link rel="stylesheet" type="text/css" href="style.css?no_cache=<?php echo rand()?>">
+<body>
+    <div id="image" class="background-image"></div>
+    <div id="left-top-hud-1" class="hud">
+        <div class="border-me-left">
+            Misaka Distributed Computing Network
+        </div>
+        <div class="small-indicator border-me-left">
+            connected, <span class="system-blue">secured</span>, logged in as Misaka_0x4E21
+        </div>
+        <div class="left-bottom-hud-1-pass" style="background: transparent;">
+            <span class="hud-title" style="border: 0;"> </span>
+        </div>
+        <div class="hud small-indicator border-me-left">
+            wlan0:  Link up, 10.0Gbps, 80.0Mhz, full-duplex.
+        </div>
+        <div class="nano-indicator border-me-left">
+            Misaka OS Ver 1.2 Build 15095
+        </div>
+        <div class="left-bottom-hud-1-pass" style="background: transparent;">
+            <span class="hud-title" style="border: 0;"> <br></span>
+        </div>
+        <div id="console" class="hud-title">
+            ------ CONSOLE ------
+        </div>
+        <div id="console-content" class="small-indicator border-me-left ">
+            [+] HUD START
+        </div>
+    </div>
+    <div id="left-bottom-hud-1" class="hud">
+        <div id="left-bottom-hud-1-iff">
+            <span id="left-bottom-hud-1-iff-title" class="hud-title">IFF</span>
+            <span id="left-bottom-hud-1-iff-content">联机</span>
+        </div>
+        <div id="left-bottom-hud-1-fcs">
+            <span class="hud-title">FCS</span>
+            联机
+        </div>
+        <div id="left-bottom-hud-1-env">
+            <span class="hud-title system-yellow">ENV</span>
+            传感器脱机
+        </div>
+        <div id="left-bottom-hud-1-dur">
+            <span class="hud-title" id="left-bottom-hud-1-dur-title">CPC</span>
+            <span id="hud-progressbar" class="hud-progressbar">状态存疑/不确定 - 等待后续判断</span>
+        </div>
+    </div>
+    <div id="right-top-hud-1" class="hud">
+        <div id="right-top-hud-notice-group">
+            <div id="right-top-hud-notice-title" class="button-title txt border-me-right right-align hover-white">
+                &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
+            </div>
+            <a class="button_link" href="notice/index.html">
+                <div id="right-top-hud-notice-okay" class="button txt border-me-right right-align hover-white">
+                    Manual/用户手册
+                </div>
+            </a>
+            <div id="right-top-hud-notice-close" class="button txt border-me-right right-align hover-white" onclick="button1_click()">
+                Close/关闭
+            </div>
+            <div style="position: absolute;
+                        top: 0.4rem;
+                        left: 0.4rem;
+                        background-color: rgba(255, 255, 255, 0.2);
+                        z-index: -1000;
+                        width: 100%;
+                        height: 100%;
+                        border-right: solid 0.1rem rgba(255, 255, 255, 0.6);
+                        ">
+            </div>
+        </div>
+    </div>
+    <div id="right-bottom-hud-1" class="hud">
+        <div class="right-bottom-hud-1-pass" style="background: transparent;">
+            <span class="hud-title small-indicator" style="border: 0;"> </span>
+        </div>
+        <div class="small-indicator border-me-right">
+            当前任务目标：
+        </div>
+        <div class="small-indicator border-me-right">
+            - 回收Misaka_0x272E
+        </div>
+        <div class="small-indicator border-me-right">
+            - 上传黑盒数据
+        </div>
+        <div class="right-bottom-hud-1-pass" style="background: transparent;">
+            <span class="hud-title small-indicator" style="border: 0;"> </span>
+        </div>
+        <div class="border-me-right small-indicator">
+            Your HUD is being monitored and protected.<br>
+        </div>
+        <div id="right-bottom-hud-1-date-time" class="border-me-right small-indicator right-align">
+            --- --- -- ---- --:--:-- GMT-----
+        </div>
+        <div id="right-bottom-hud-1-active-monitor" class="border-me-right small-indicator right-align">
+            最后活动
+            <span id="right-bottom-hud-1-active-monitor-timer" class="right-align">
+                --- 
+            </span>
+        </div>
+    </div>
+</body>
+</html>
+<audio id="IFF-offline">
+    <source src="rec/sys_offline.ogg" type="audio/ogg">
+</audio>
+<script src="script.js?no_cache=<?php echo rand()?>"></script>

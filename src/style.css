@@ -1,0 +1,128 @@
+body{
+    font-family: "Source Code Pro", "Microsoft JhengHei UI", sans-serif;
+    font-size: 20px;
+    background: url(rec/wallpaper.png) no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+.background-image{
+    background: url(rec/wallpaper.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    z-index: -1000;
+    width: 100%;
+    height: 100%;
+    filter: brightness(60%) contrast(90%);
+}
+#left-bottom-hud-1{
+    color: rgba(230, 230, 230, 0.8);
+    position: absolute;
+    left: 3.5rem;
+    bottom: 3.5rem;
+    transform: rotate3d(0.15, 0, -0.01, 15deg);
+}
+#left-top-hud-1{
+    color: rgba(230, 230, 230, 0.8);
+    position: absolute;
+    left: 3.5rem;
+    top: 5rem;
+    transform: rotate3d(-0.15, 0, 0.01, 15deg);
+}
+#right-top-hud-1{
+    color: rgba(230, 230, 230, 0.8);
+    position: absolute;
+    right: 3.5rem;
+    top: 5rem;
+    transform: rotate3d(-0.15, 0, -0.01, 15deg);
+}
+#right-bottom-hud-1{
+    color: rgba(230, 230, 230, 0.8);
+    position: absolute;
+    right: 3.5rem;
+    bottom: 3.5rem;
+    transform: rotate3d(0.15, 0, -0.01, 15deg);
+}
+.button_link{
+    color: inherit;
+    text-decoration: none;
+}
+.button-title{
+    padding: 0.3rem 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.button{
+    padding: 0.3rem 1rem;
+}
+.hover-white:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.txt{
+    text-shadow: #000 0 0 0.5rem;
+}
+.left-align{
+    text-align: left;
+}
+.right-align{
+    text-align: right;
+}
+.border-me-left{
+    border-left: solid 0.1rem rgba(230, 230, 230, 0.8);
+    padding-left: 1rem;
+    font-size: 1.7rem;
+}
+.border-me-right{
+    border-right: solid 0.1rem rgba(230, 230, 230, 0.8);
+    padding-right: 1rem;
+}
+.hud-title{
+    font-family: "Source Code Pro", "Consolas", "MS Gothic", monospace;
+    border-left: solid 0.1rem rgba(230, 230, 230, 0.8);
+    padding: 0 0.5rem 0 1.2rem;
+}
+.hud-progressbar{
+    font-family: "Microsoft JhengHei UI", sans-serif;
+}
+.large-indicator{
+    font-size: 1.5rem;
+}
+.notice-indicator{
+    font-size: 1.0rem;
+}
+.small-indicator{
+    font-size: 1.0rem;
+    line-height: 1.7rem;
+}
+.nano-indicator{
+    font-size: 0.9rem;
+}
+.system-blue{
+    color: rgb(179, 230, 255);
+}
+@keyframes system-red{
+    0% {
+        background-color: rgba(255, 127, 78, 0.5);
+        border-left: solid 0.1rem rgba(255, 0, 0, 1);
+    }
+    50% {
+        background-color: rgba(255, 127, 78, 0);
+        border-left: solid 0.1rem rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        background-color: rgba(255, 127, 78, 0.5);
+        border-left: solid 0.1rem rgba(255, 0, 0, 1);
+    }
+}
+.system-red{
+    animation-name: system-red;
+    animation-duration: 0.33s;
+    animation-iteration-count: infinite;
+    background-color: rgba(255, 127, 78, 0.5);
+    border-left: solid 0.1rem rgba(255, 0, 0, 1);
+}
+.system-yellow{
+    background-color: rgba(255, 208, 40, 0.3);
+}
