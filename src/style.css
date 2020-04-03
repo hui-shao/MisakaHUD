@@ -44,7 +44,7 @@ body{
     position: absolute;
     right: 3.5rem;
     bottom: 3.5rem;
-    transform: rotate3d(0.15, 0, -0.01, 15deg);
+    transform: rotate3d(0.15, 0, 0.01, 15deg);
 }
 @keyframes blink{
 	0% {opacity: 0;}
@@ -111,9 +111,18 @@ body{
     font-size: 0.9rem;
 }
 .system-blue{
-    color: rgb(179, 230, 255);
+    color: rgb(140, 226, 255);
 }
-@keyframes system-red{
+.system-green{
+    color: rgb(152, 253, 165);
+}
+.system-yellow{
+    color: rgb(255, 247, 190);
+}
+.system-red{
+    color: rgb(255, 166, 166);
+}
+@keyframes system-bg-red{
     0% {
         background-color: rgba(255, 127, 78, 0.5);
         border-left: solid 0.1rem rgba(255, 0, 0, 1);
@@ -127,13 +136,13 @@ body{
         border-left: solid 0.1rem rgba(255, 0, 0, 1);
     }
 }
-.system-red{
-    animation-name: system-red;
+.system-bg-red{
+    animation-name: system-bg-red;
     animation-duration: 0.33s;
     animation-iteration-count: infinite;
     background-color: rgba(255, 127, 78, 0.5);
     border-left: solid 0.1rem rgba(255, 0, 0, 1);
 }
-.system-yellow{
+.system-bg-yellow{
     background-color: rgba(255, 208, 40, 0.3);
 }

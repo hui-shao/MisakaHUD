@@ -149,14 +149,14 @@ function long_term_timer(){
     var iff_title_object = document.getElementById("left-bottom-hud-1-iff-title");
     var iff_object = document.getElementById("left-bottom-hud-1-iff-content");
     if(bar_factor < 0.4 && bar_factor > 0.15){
-        class_remove(bar_object, "system-red");
-        class_add(bar_object, "system-yellow");
+        class_remove(bar_object, "system-bg-red");
+        class_add(bar_object, "system-bg-yellow");
     }else if(bar_factor <= 0.15){
-        class_add(bar_object, "system-red");
-        class_remove(bar_object, "system-yellow");
+        class_add(bar_object, "system-bg-red");
+        class_remove(bar_object, "system-bg-yellow");
     }else{
-        class_remove(bar_object, "system-red");
-        class_remove(bar_object, "system-yellow");
+        class_remove(bar_object, "system-bg-red");
+        class_remove(bar_object, "system-bg-yellow");
     }
 
     var iff_offline = document.getElementById("IFF-offline");
@@ -173,23 +173,23 @@ function long_term_timer(){
     var random_iff = Math.random();
     if(bar_factor < 0.3 - random_iff * 0.2 && bar_factor > 0.1 - random_iff * 0.05) {
         iff_object.innerHTML = "状态存疑/不确定 - 等待后续判断";
-        class_add(iff_title_object, "system-yellow");
-        class_remove(iff_title_object, "system-red");
+        class_add(iff_title_object, "system-bg-yellow");
+        class_remove(iff_title_object, "system-bg-red");
         iff_offline_time = 0;
         reset_iff_playcount();
     }else if(bar_factor > 0 && bar_factor <= 0.1 - random_iff * 0.05){
-        class_remove(iff_title_object, "system-yellow");
-        class_add(iff_title_object, "system-red");
+        class_remove(iff_title_object, "system-bg-yellow");
+        class_add(iff_title_object, "system-bg-red");
         iff_object.innerHTML = "停止工作 - " + friendly_time_duration(iff_offline_time);
         play_iff_offline_voice();
     }else if(bar_factor <= 0) {
         iff_object.innerHTML = "脱机 - " + friendly_time_duration(iff_offline_time);
-        class_remove(iff_title_object, "system-yellow");
-        class_add(iff_title_object, "system-red");
+        class_remove(iff_title_object, "system-bg-yellow");
+        class_add(iff_title_object, "system-bg-red");
         play_iff_offline_voice();
     }else{
-        class_remove(iff_title_object, "system-yellow");
-        class_remove(iff_title_object, "system-red");
+        class_remove(iff_title_object, "system-bg-yellow");
+        class_remove(iff_title_object, "system-bg-red");
         iff_object.innerHTML = "联机";
         iff_offline_time = 0;
         reset_iff_playcount();
