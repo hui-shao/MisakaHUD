@@ -148,15 +148,22 @@ function long_term_timer(){
     var bar_object = document.getElementById("left-bottom-hud-1-dur-title");
     var iff_title_object = document.getElementById("left-bottom-hud-1-iff-title");
     var iff_object = document.getElementById("left-bottom-hud-1-iff-content");
+    var hud_status = document.getElementById("right-bottom-hud-1-status-text")
     if(bar_factor < 0.4 && bar_factor > 0.15){
         class_remove(bar_object, "system-bg-red");
         class_add(bar_object, "system-bg-yellow");
+        hud_status.innerHTML = "[Warning] Low battery. Charge needed.";
+        hud_status.className = "system-yellow";
     }else if(bar_factor <= 0.15){
         class_add(bar_object, "system-bg-red");
         class_remove(bar_object, "system-bg-yellow");
+        hud_status.innerHTML = "[Error] Low battery. Connection closed !";
+        hud_status.className = "system-red";
     }else{
         class_remove(bar_object, "system-bg-red");
         class_remove(bar_object, "system-bg-yellow");
+        hud_status.innerHTML = "Your HUD is being monitored and protected.";
+        hud_status.className = "system-green";
     }
 
     var iff_offline = document.getElementById("IFF-offline");
